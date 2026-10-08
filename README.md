@@ -33,6 +33,12 @@ If you have a project, issue, or bug that needs investigation, feel free to cont
 
 ## Projects
 
+### [RefScope](https://github.com/sairex53/refscope)
+
+Experimental Linux kernel tool for investigating object lifetime and reference-counting bugs. It captures explicitly selected kernel events with eBPF, builds offline object timelines, and compares saved runs to rank possible causes.
+
+The prototype also includes offline target discovery and provenance analysis. Diagnosis has passed synthetic fixture tests; validation against a known real kernel subsystem bug is still open.
+
 ### [nsdiff](https://github.com/sairex53/nsdiff)
 
 Linux utility for comparing runtime state and execution environments of processes.
