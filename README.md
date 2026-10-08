@@ -45,4 +45,4 @@ Written in C and focused on Linux internals such as `/proc`, namespaces, mounts,
 
 ## Contact
 
-Telegram: [@acidcofe](https://t.me/fad3_away)
+Telegram: [@fad3_away](https://t.me/fad3_away)
