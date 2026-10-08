@@ -27,7 +27,7 @@ I'm especially interested in:
 - reverse engineering and security tooling;
 - small utilities and developer tools.
 
-I'm also open to **unpaid contributions** if the task is technically interesting and gives me useful real-world experience.
+I'm open to **paid opportunities** in Linux systems programming, C/C++, kernel development, and eBPF, particularly projects involving debugging, performance analysis, and low-level development.
 
 If you have a project, issue, or bug that needs investigation, feel free to contact me.
 
