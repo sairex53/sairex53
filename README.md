@@ -45,9 +45,14 @@ I'm interested in contributing to existing projects rather than building everyth
 
 My priorities are Linux kernel fixes, eBPF tooling, debuggers, tracing infrastructure, and system utilities that other developers actually depend on.
 
-**Upstream work:**
+**Upstream work**
 
-[bcc PR #5571](https://github.com/iovisor/bcc/pull/5571) — proposed fix for multiarch header resolution when building BPF programs.
+- [bcc #5571](https://github.com/iovisor/bcc/pull/5571) — proposed host multiarch UAPI header resolution for BPF builds, reproduced and validated on Debian amd64 and Fedora aarch64.
+- [bcc #5572](https://github.com/iovisor/bcc/pull/5572) — proposed safer handling of `ENOSPC` during Python BPF batch map lookups, with nine regression tests.
+- [bcc #5570](https://github.com/iovisor/bcc/pull/5570) and [bcc #5569](https://github.com/iovisor/bcc/pull/5569) — proposed Lua compiler and tracepoint parsing fixes, each with targeted regression coverage.
+- [yasbd-lib #365](https://github.com/speedyk-005/yasbd-lib/pull/365) — merged directory-to-JSONL example, with output-path validation added after review feedback.
+
+The BCC PRs are still open. Their descriptions document the test limits; live BPF checks requiring kernel capabilities were unavailable in the test environment.
 
 I want to contribute changes that are reproducible, technically justified, tested, and useful beyond my own machine.
 
