@@ -1,99 +1,78 @@
-# Hi, I'm Sairex
+# sairex53
 
-Developer focused on **Linux, C/C++, Python, systems programming, reverse engineering, and security research**.
+**A crash is a symptom. I'm interested in what caused it.**
 
-I enjoy understanding how software works internally, debugging complex problems, and building practical tools — from low-level Linux utilities to Telegram bots, automation systems, and API integrations.
+I spend most of my time exploring Linux internals — tracing kernel behavior, investigating bugs, reading source code, and building tools to make complicated failures easier to understand.
 
-## What I'm working on
+My focus is **Linux kernel development, C/C++, eBPF, systems programming, and low-level debugging**.
 
-- Linux systems programming
-- C / C++ development
-- Python development and automation
-- Telegram bots and Telegram Bot API
-- REST APIs and third-party integrations
-- Asynchronous programming
-- Linux kernel development and debugging
-- eBPF and developer tools
-- Reverse engineering and vulnerability research
-- Embedded development
-- Open-source contributions
+I'm particularly interested in the problems that don't have obvious answers: reference-counting mistakes, unexpected kernel behavior, memory corruption, and failures that only appear under specific conditions.
 
-## What I'm looking for
+## Where I focus
 
-I'm looking for **real-world projects, freelance opportunities, and practical engineering tasks** where I can contribute, solve problems, and gain production experience.
+- **Linux kernel & syzbot** — reproducing reported bugs, investigating root causes, testing fixes, and working toward upstream patches.
+- **eBPF & tracing** — kernel instrumentation, fentry/kprobes, BTF, CO-RE, and understanding what actually happens at runtime.
+- **C/C++ & Linux internals** — systems utilities, process state, namespaces, cgroups, memory, and low-level interfaces.
+- **Reverse engineering & security research** — examining implementation details, understanding unexpected behavior, and investigating vulnerabilities.
 
-I'm especially interested in:
+I'm more interested in understanding *why* something fails than making the symptoms disappear.
 
-- Python development, scripting, and automation;
-- Telegram bot development and API integrations;
-- building backend services and small utilities;
-- fixing bugs in Python and C/C++ projects;
-- Linux and low-level development;
-- debugging difficult or unusual issues;
-- contributing to open-source projects;
-- reverse engineering and security tooling;
-- developing tools for Linux and developers.
-
-I'm open to **paid opportunities**, including freelance projects, part-time work, and long-term collaboration.
-
-My main areas of interest are **Python, Telegram bots, automation, Linux systems programming, C/C++, and eBPF**.
-
-If you need a Telegram bot, automation tool, API integration, or help investigating a technical issue, feel free to contact me.
-
-## Projects
-
-### [Telegram Bots & Python Projects](https://t.me/sairex_python)
-
-My portfolio of Telegram bots, Python automation tools, and API integrations.
-
-The channel features:
-
-- Telegram bot demonstrations;
-- Python automation projects;
-- Telegram Bot API integrations;
-- practical examples of implemented functionality;
-- project descriptions and technical details.
-
-**[View Telegram Bot Portfolio →](https://t.me/sairex_python)**
+## Things I'm building
 
 ### [RefScope](https://github.com/sairex53/refscope)
 
-Experimental Linux kernel tool for investigating object lifetime and reference-counting bugs.
+**Investigating Linux kernel object lifetimes and reference-counting bugs.**
 
-It captures explicitly selected kernel events with eBPF, builds offline object timelines, and compares saved runs to rank possible causes.
+RefScope is an experimental eBPF-based tracing and offline analysis tool.
 
-The prototype also includes offline target discovery and provenance analysis.
+It captures selected kernel operations, reconstructs per-object event timelines, and compares separate runs to identify suspicious differences in reference behavior.
 
-Diagnosis has passed synthetic fixture tests; validation against a known real kernel subsystem bug is still open.
+The goal is to make investigating use-after-free bugs, reference leaks, and incorrect object lifetime management less dependent on guesswork.
+
+Currently a research prototype. Synthetic tests are passing, but validation against a reproduced real-world kernel bug is still in progress.
 
 ### [nsdiff](https://github.com/sairex53/nsdiff)
 
-Linux utility for comparing runtime state and execution environments of processes.
+**When two Linux processes behave differently, find out what's different.**
 
-Written in C and focused on Linux internals such as `/proc`, namespaces, mounts, cgroups, environment state, and process metadata.
+A C utility for comparing process execution environments, including namespaces, cgroups, mounts, credentials, security settings, and runtime state.
 
-## Tech
+Designed to make subtle differences between shells, services, containers, and other Linux environments easier to inspect.
 
-**Languages:**
+## Beyond my own repositories
 
-`C` `C++` `Python` `Bash`
+I'm interested in contributing to existing projects rather than building everything from scratch.
 
-**Python & Backend:**
+My priorities are Linux kernel fixes, eBPF tooling, debuggers, tracing infrastructure, and system utilities that other developers actually depend on.
 
-`Telegram Bot API` `REST APIs` `AsyncIO` `Automation` `JSON` `HTTP`
+**Upstream work:**
 
-**Linux & Systems:**
+[bcc PR #5571](https://github.com/iovisor/bcc/pull/5571) — proposed fix for multiarch header resolution when building BPF programs.
 
-`Linux` `eBPF` `Linux Kernel` `GDB` `QEMU` `ARM64` `Reverse Engineering`
+I want to contribute changes that are reproducible, technically justified, tested, and useful beyond my own machine.
 
-**Tools & Development:**
+## Tools of the trade
 
-`Git` `GitHub` `Docker` `ESP32` `Debugging` `Open Source`
+**Languages:** `C` · `C++` · `Assembly` · `Bash`
 
-## Contact
+**Systems:** `Linux` · `Linux Kernel` · `eBPF` · `libbpf` · `BTF` · `CO-RE` · `AArch64`
 
-- **Telegram:** [@fad3_away](https://t.me/fad3_away)
-- **Telegram Bot Portfolio:** [@sairex_python](https://t.me/sairex_python)
-- **GitHub:** [sairex53](https://github.com/sairex53)
+**Debugging & development:** `GDB` · `QEMU` · `Clang/LLVM` · `Git` · `Kernel Tracing`
 
-**Open to freelance projects, technical collaboration, and paid development opportunities.**
+**Areas of interest:** `Kernel Debugging` · `syzbot` · `Memory Safety` · `Reverse Engineering` · `Vulnerability Research`
+
+## What I'm looking for
+
+I'm open to **open-source collaboration, paid low-level development, and remote engineering opportunities** involving Linux, C/C++, kernel debugging, eBPF, and systems tooling.
+
+I'm especially interested in working with people who maintain real software, investigate difficult bugs, or build tools used by other developers.
+
+If you have a reproducible Linux issue, a difficult debugging problem, or a systems project worth contributing to, I'd be interested in discussing it.
+
+You can reach me through the contact link on my [GitHub profile](https://github.com/sairex53).
+
+---
+
+`Reproduce → Trace → Understand → Fix → Verify`
+
+**Less guesswork. Better tools. Fewer unexplained bugs.**
